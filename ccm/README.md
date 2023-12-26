@@ -10,7 +10,7 @@ This project is a tensorflow implement of our work, [CCM](http://coai.cs.tsinghu
 
 ## Dependencies
 	
-* Python 2.7
+* Python 2.7(本实验使用3.6）
 * Numpy
 * Tensorflow 1.3.0
 
