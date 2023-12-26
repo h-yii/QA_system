@@ -127,16 +127,6 @@ def gen_batched_data(data):
     triple_num = max([len(item['all_triples']) for item in data])+1
     triple_len = max([len(tri) for item in data for tri in item['all_triples']])
     '''
-    if post_lengths:  # 
-        encoder_len = max(post_lengths) + 1
-    else:
-        encoder_len = 1
-    #encoder_len = max([len(item['post']) for item in data])+1
-    response_lengths= [len(item['response']) for item in data]
-    if response_lengths:  # 
-        decoder_len = max(response_lengths) + 1
-    else:
-        decoder_len = 1
     #decoder_len = max([len(item['response']) for item in data])+1
     all_triples_lengths= [len(item['all_triples']) for item in data]
     if all_triples_lengths:  # 
