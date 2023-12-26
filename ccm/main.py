@@ -193,14 +193,12 @@ def gen_batched_data(data):
     return batched_data
 
 def train(model, sess, data_train):
-    #print(111111111)
     batched_data = gen_batched_data(data_train)
     outputs = model.step_decoder(sess, batched_data)
     return np.sum(outputs[0])
 
 def generate_summary(model, sess, data_train):
     selected_data = [random.choice(data_train) for i in range(FLAGS.batch_size)]
-    #print(222222222)
     batched_data = gen_batched_data(selected_data)
     summary = model.step_decoder(sess, batched_data, forward_only=True, summary=True)[-1]
     return summary
@@ -211,7 +209,6 @@ def evaluate(model, sess, data_dev, summary_writer):
     st, ed, times = 0, FLAGS.batch_size, 0
     while st < len(data_dev):
         selected_data = data_dev[st:ed]
-        #print(333333333333)
         batched_data = gen_batched_data(selected_data)
         outputs = model.step_decoder(sess, batched_data, forward_only=True)
         loss += np.sum(outputs[0])
