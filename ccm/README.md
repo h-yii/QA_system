@@ -15,7 +15,7 @@ This project is a tensorflow implement of our work, [CCM](http://coai.cs.tsinghu
 * Tensorflow 1.3.0
 
 ## Quick Start
-
+本实验使用了ubuntu18.04
 * Dataset
 
 	Commonsense Conversation Dataset contains one-turn post-response pairs with the corresponding commonsense knowledge graphs. Each pair is associated with some knowledge graphs retrieved from ConceptNet. We have applied some filtering rules to retain high-quality and useful knowledge graphs.
