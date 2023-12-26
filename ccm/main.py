@@ -18,10 +18,10 @@ tf.app.flags.DEFINE_integer("embed_units", 300, "Size of word embedding.")
 tf.app.flags.DEFINE_integer("trans_units", 100, "Size of trans embedding.")
 tf.app.flags.DEFINE_integer("units", 512, "Size of each model layer.")
 tf.app.flags.DEFINE_integer("layers", 2, "Number of layers in the model.")
-tf.app.flags.DEFINE_integer("batch_size", 10, "Batch size to use during training.")#100
+tf.app.flags.DEFINE_integer("batch_size", 100, "Batch size to use during training.")#100
 tf.app.flags.DEFINE_string("data_dir", "./data", "Data directory")
 tf.app.flags.DEFINE_string("train_dir", "./train", "Training directory.")
-tf.app.flags.DEFINE_integer("per_checkpoint", 2, "How many steps to do per checkpoint.")#1000
+tf.app.flags.DEFINE_integer("per_checkpoint", 200, "How many steps to do per checkpoint.")#1000
 tf.app.flags.DEFINE_integer("inference_version", 0, "The version for inferencing.")
 tf.app.flags.DEFINE_boolean("log_parameters", True, "Set to True to show the parameters")
 tf.app.flags.DEFINE_string("inference_path", "test", "Set filename of inference")
