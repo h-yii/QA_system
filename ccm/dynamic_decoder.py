@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# ==============================================================================
+# ==============================================================
 
 """Seq2seq layer operations for use in neural networks.
 """
@@ -127,6 +127,7 @@ def dynamic_rnn_decoder(cell, decoder_fn, inputs=None, sequence_length=None,
     Raises:
         ValueError: if inputs is not None and has less than three dimensions.
     """
+  #abcd
     with ops.name_scope(name, "dynamic_rnn_decoder",
                                             [cell, decoder_fn, inputs, sequence_length,
                                              parallel_iterations, swap_memory, time_major, scope]):
